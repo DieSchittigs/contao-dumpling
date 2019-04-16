@@ -1,0 +1,31 @@
+{
+    "name": "dieschittigs/contao-dumpling-bundle",
+    "type": "contao-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tobias Duehr",
+            "email": "tobias@dieschittigs.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DieSchittigs\\ContaoDumplingBundle\\": "src/"
+        },
+        "classmap": [
+            "src/Resources/contao/"
+        ],
+        "exclude-from-classmap": [
+            "src/Resources/contao/config/",
+            "src/Resources/contao/dca/",
+            "src/Resources/contao/languages/"
+        ]
+    },
+    "extra": {
+        "contao-manager-plugin": "DieSchittigs\\ContaoDumplingBundle\\ContaoManager\\Plugin"
+    },
+    "require": {
+        "ifsnop/mysqldump-php": "^2.6",
+        "guzzlehttp/guzzle": "~6.0"
+    }
+}

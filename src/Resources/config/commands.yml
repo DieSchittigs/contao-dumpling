@@ -1,0 +1,42 @@
+services:
+    dump.command.pull:
+        class: DieSchittigs\ContaoDumplingBundle\Command\DumplingPullCommand
+        tags: ['console.command']
+        arguments:
+            - '@contao.framework'
+            - '@database_connection'
+
+    dump.command.boostai:
+        class: DieSchittigs\ContaoDumplingBundle\Command\DumplingBoostAutoIncrementCommand
+        tags: ['console.command']
+        arguments:
+            - '@contao.framework'
+            - '@database_connection'
+
+    dump.command.download:
+        class: DieSchittigs\ContaoDumplingBundle\Command\DumplingDownloadCommand
+        tags: ['console.command']
+        arguments:
+            - '@contao.framework'
+            - '@database_connection'
+
+    dump.command.push:
+        class: DieSchittigs\ContaoDumplingBundle\Command\DumplingPushCommand
+        tags: ['console.command']
+        arguments:
+            - '@contao.framework'
+            - '@database_connection'
+
+    dump.command.upload:
+        class: DieSchittigs\ContaoDumplingBundle\Command\DumplingUploadCommand
+        tags: ['console.command']
+        arguments:
+            - '@contao.framework'
+            - '@database_connection'
+
+    dump.command.import:
+        class: DieSchittigs\ContaoDumplingBundle\Command\DumplingImportCommand
+        tags: ['console.command']
+        arguments:
+            - '@contao.framework'
+            - '@database_connection'
